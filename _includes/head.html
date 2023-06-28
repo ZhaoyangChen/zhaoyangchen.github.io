@@ -21,4 +21,9 @@
 {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" >
 
+{%- if page.key == 'page-about' -%}
+<link rel="stylesheet" href="/assets/css/about-style.css">
+{%- endif -%}
+
+
 {%- include head/custom.html -%}
