@@ -6,12 +6,12 @@ article_header:
 ---
 在深度学习领域中，神经网络是一种强大的工具，它可以模拟人脑神经元之间的相互作用，实现各种复杂的任务。而激活函数作为神经网络的重要组成部分，对于网络的性能和表征能力起着至关重要的作用。本文将探讨激活函数的重要性以及常用的几种激活函数。
 <!--more-->
-## 1. 什么是激活函数
+### 1. 什么是激活函数
 激活函数是神经网络中的一个关键组件，它对神经元的输入进行**非线性变换**，将其转化为输出信号。激活函数的主要作用是引入非线性特性，使神经网络能够更好地拟合非线性函数，从而提高网络的表达能力。
-## 2. 激活函数的重要性
+### 2. 激活函数的重要性
 如果神经网络中只使用线性激活函数，那么网络的表达能力将受到限制，无法处理复杂的非线性模式。激活函数的引入能够使网络具备更强的非线性表达能力，从而能够拟合更复杂的问题。
-## 3. 激活函数汇总
-### 3.1 Sigmoid
+### 3. 激活函数汇总
+#### 3.1 Sigmoid
 >Sigmoid函数广义上来说，是一类具有S形状曲线的函数统称，例如逻辑Sigmoid函数和双曲正切函数均属于Sigmoid类函数。
 > 但一般情况下提到Sigmoid函数，如果不做特殊说明，特指逻辑Sigmoid函数。
 > 后续文中也将沿用这一习惯。
@@ -50,7 +50,7 @@ Sigmoid 总结：
   * 输出非0均值
   * 指数形式，计算时间复杂度高
 
-### 3.2 Tanh
+#### 3.2 Tanh
 双曲正切函数的历史发展与指数函数和对数函数的研究相关。早在17世纪，数学家尼科拉斯·梅尔塞尼（Nicolas Mercator）研究了双曲正弦函数和双曲余弦函数，并引入了双曲正切函数作为它们之间的比值。这些函数被称为双曲函数，因为它们与圆锥曲线的双曲线有关。
 
 双曲正切函数定义为:
@@ -76,7 +76,7 @@ Tanh总结:
   * 指数形式，计算时间复杂度高
 
 
-### 3.3 ReLU
+#### 3.3 ReLU
 ReLU函数的提出可以追溯到20世纪90年代。一些早期的研究工作提到了类似ReLU函数的激活函数的概念，但当时还没有引起广泛的关注。
 
 ReLU函数真正引起广泛关注和应用的时间是在2010年代。在2011年，Hinton等人在一篇名为[《Rectified Linear Units Improve Restricted Boltzmann Machines》](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)的论文中首次提到了ReLU函数，并证明了它在训练深度神经网络中的优势。
@@ -105,7 +105,7 @@ ReLU 总结:
   * Dead ReLU Problem
   * 分段不平滑
 
-### 3.4 Leaky ReLU
+#### 3.4 Leaky ReLU
 
 2013年，Andrew L. Maas等人在一篇名为[《Rectifier Nonlinearities Improve Neural Network Acoustic Models》](https://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf)的论文中首次提出Leaky ReLU。在该论文中通过实验证明，相对于传统的ReLU函数，Leaky ReLU函数可以进一步改善神经网络在语音识别等任务上的性能。
 
@@ -133,7 +133,7 @@ Leaky ReLU总结：
   * 预定义斜率
 
 
-### 3.5 PReLU
+#### 3.5 PReLU
 
 2014年，Kaiming He等人在一篇名为[《Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification》](https://arxiv.org/pdf/1502.01852.pdf) 的论文中首次提出PReLU。在这篇论文中，研究人员通过实验证明，相对于传统的ReLU函数和Leaky ReLU函数，PReLU函数可以进一步提升神经网络的表现。
 
@@ -160,7 +160,7 @@ PReLU总结：
   * 输出不是0均值的
   * 分段不平滑
 
-### 3.6 ELU
+#### 3.6 ELU
 2015年，Djork-Arne Clevert等人在一篇名为[《Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs)》](https://arxiv.org/pdf/1511.07289.pdf)的论文中首次提出ELU。
 
 ELU在负数部分引入了指数函数，具有平滑且非线性的特性。
@@ -187,7 +187,7 @@ ELU函数的引入主要是为了解决ReLU函数的一些限制，如负数部�
 * **<font color="red">缺点</font>**
   * 指数计算复杂度
 
-### 3.7 GELU
+#### 3.7 GELU
 
 2016年，Hendrycks和Gimpel在一篇名为[《Gaussian Error Linear Units (GELUs)》](https://arxiv.org/pdf/1606.08415.pdf)的论文中首次提出GELU。
 
