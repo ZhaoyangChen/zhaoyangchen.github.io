@@ -38,13 +38,12 @@ $$ 2 \times \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix} = \begin{bmatr
 
 $$ \begin{bmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{bmatrix} \begin{bmatrix} 2 & 4 \\ 6 & 8 \\ 10 & 12 \end{bmatrix} = \begin{bmatrix} c_{11} & c_{12} \\ c_{21} & c_{22}\end{bmatrix}$$
 
-$$c_{11} = 1 * 2 + 3 * 6 + 5 * 10 = 70$$
-
-$$c_{12} = 1 * 4 + 3 * 8 + 5 * 12 = 88$$
-
-$$c_{21} = 7 * 2 + 9 * 6 + 11 * 10 = 178$$
-
-$$c_{22} = 7 * 4 + 9 * 8 + 11 * 12 = 232 $$
+$$\begin{align}
+c_{11} &= 1 * 2 + 3 * 6 + 5 * 10 = 70 \\
+c_{12} &= 1 * 4 + 3 * 8 + 5 * 12 = 88 \\
+c_{21} &= 7 * 2 + 9 * 6 + 11 * 10 = 178 \\
+c_{22} &= 7 * 4 + 9 * 8 + 11 * 12 = 232 \\
+\end{align}$$
 
 所以
 
@@ -71,7 +70,7 @@ $$ \begin{bmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{bmatrix} \begin{bmatrix} 2 & 4 \
 
 这种运算比较简单且符合直觉，以下是一个简单的例子：
 
-$$ \begin{bmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{bmatrix} \circ \begin{bmatrix} 2 & 4 & 6  \\ 8 & 10 & 12 \end{bmatrix} = \begin{bmatrix} 2 & 12 & 30\\56 & 90 & 132\end{bmatrix}$$
+$$\small \begin{bmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{bmatrix} \circ \begin{bmatrix} 2 & 4 & 6  \\ 8 & 10 & 12 \end{bmatrix} = \begin{bmatrix} 2 & 12 & 30\\56 & 90 & 132\end{bmatrix}$$
 
 阿达玛乘积：
 * 满足交换律
@@ -93,7 +92,9 @@ $$<A,B> = 2 + 12 + 30 + 56 + 90 + 132 = 322 $$
 
 运算方式是将前一个矩阵的每个元素乘上后一个完整的矩阵，然后按顺序拼接为结果矩阵。数学定义比较冗长，看一个例子就能准确理解克罗内克积的计算方式：
 
-$$ \begin{bmatrix} 1 & 3 \\ 5 & 7  \end{bmatrix} \otimes \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} = \begin{bmatrix} 1 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} & 3 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} \\ 5 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} & 7 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} \end{bmatrix} = \begin{bmatrix} 2 & 4 & 6 & 12  \\ 6 & 8 & 18 & 24 \\ 10 & 20 & 14 & 28 \\ 30 & 40 & 42 & 56 \end{bmatrix}$$
+$$\small \begin{align}
+\begin{bmatrix} 1 & 3 \\ 5 & 7  \end{bmatrix} \otimes \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} &= \begin{bmatrix} 1 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} & 3 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} \\ 5 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} & 7 \times  \begin{bmatrix} 2 & 4   \\ 6 & 8 \end{bmatrix} \end{bmatrix} \\ &= \begin{bmatrix} 2 & 4 & 6 & 12  \\ 6 & 8 & 18 & 24 \\ 10 & 20 & 14 & 28 \\ 30 & 40 & 42 & 56 \end{bmatrix}
+\end{align}$$
 
 克罗内克积：
 * 满足交换律
