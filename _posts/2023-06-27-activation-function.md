@@ -123,6 +123,7 @@ Leaky ReLU函数的引入为神经网络的训练和性能提供了一个有效�
 
 Leaky ReLU总结：
 
+
 * 别名：渗漏线性单元
 * 表达式: $$f(x) = max(0.01x, x)$$
 * **<font color="green">优点</font>**
